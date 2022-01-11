@@ -11,7 +11,12 @@
 //  If we are given [2,22], should return [4,44]
 //P:Make a function that takes in an array
 function doubled(arr){
-    return arr.map(element=>element*2)
+    if(arr.length === 0){
+        console.log('Array is invalid')
+    }else{
+        return arr.map(element=>element*2)
+    }
+    
 }
 // OR
 //[1,2,3].map(1=>1*2) -> 2
@@ -28,3 +33,4 @@ function doubled(arr){
 //map through the array and multiply each element by 2 and return
 doubled([1,2,3])//just the answer
 console.log(double([2,3,4]),[(4,6,8)]//answer you're supposed to get
+console.log(doubled([]))
